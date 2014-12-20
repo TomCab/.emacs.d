@@ -22,7 +22,6 @@
 ;; The packages you want installed. You can also install these
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
-(require 'cl)
 (defvar my-packages
  '(
   	color-theme
@@ -44,7 +43,8 @@
   	hlinum
   	ido-ubiquitous
   	magit
-  	naquadah-theme
+  	markdown-mode
+        naquadah-theme
   	paredit
   	pkg-info
   	popup
@@ -53,23 +53,13 @@
   	rainbow-delimiters
   	s
   	smex
-  	tagedit)
-  "A list of packages to ensure are installed at launch.")
+  	tagedit))
 
-;; Check if the above listed packages are installed. If not, update the local package
-;; database, download and install the packages from the repositories.
-(defun my-packages-installed-p ()
-  (loop for p in my-packages
-        when (not (package-installed-p p)) do (return nil)
-        finally (return t)))
- 
-(unless (my-packages-installed-p)
-  ;; check for new packages (package versions)
-  (package-refresh-contents)
-  ;; install the missing packages
-  (dolist (p my-packages)
-    (when (not (package-installed-p p))
-      (package-install p))))
+;; Check if the above listed packages are installed. If not, update the local
+;; package database, download and install the packages from the repositories.
+(dolist (p my-packages)
+(when (not (package-installed-p p))
+(package-install p)))
 
 ;;;;
 ;; Customization
@@ -100,7 +90,14 @@
 ;; For editing lisps
 (load "elisp-editing.el")
 
+;; These customizations change color themes and character size for better
+;; readability
+(load "themes.el")
+
 ;; Language-specific
 ;; There's nothing here yet, as I haven't customized anything - 20141210
+
+;; Disable changing a whole region to uppercase and/or lowercase,
+;; since it tends to be confusing
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
