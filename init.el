@@ -24,36 +24,38 @@
 ;; Add in your own as you wish:
 (defvar my-packages
  '(
-  	color-theme
-  	ctable
-  	dakrone-theme
-  	dash
-  	dummyparens
-  	epl
-  	ess
-  	ess-R-data-view
-  	ess-R-object-popup
-  	ess-smart-underscore
-  	f
-  	flatland-theme
-  	flylisp
-  	git
-  	git-commit-mode
-  	git-rebase-mode
-  	hlinum
-  	ido-ubiquitous
-  	magit
-  	markdown-mode
-        naquadah-theme
-  	paredit
-  	pkg-info
-  	popup
-  	projectile
-  	racket-mode
-  	rainbow-delimiters
-  	s
-  	smex
-  	tagedit))
+   autocomplete
+   color-theme
+   ctable
+   dakrone-theme
+   dash
+   dummyparens
+   epl
+   ess
+   ess-R-data-view
+   ess-R-object-popup
+   ess-smart-underscore
+   f
+   flatland-theme
+   flylisp
+   git
+   git-commit-mode
+   git-rebase-mode
+   hlinum
+   ido-ubiquitous
+   magit
+   markdown-mode
+   naquadah-theme
+   paredit
+   pkg-info
+   popup
+   pos-tip
+   projectile
+   racket-mode
+   rainbow-delimiters
+   s
+   smex
+   tagedit))
 
 ;; Check if the above listed packages are installed. If not, update the local
 ;; package database, download and install the packages from the repositories.
@@ -101,3 +103,17 @@
 ;; since it tends to be confusing
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(racket-memory-limit 550)
+ '(racket-program "/usr/bin/racket")
+ '(raco-program "/usr/bin/raco"))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(racket-paren-face ((t (:foreground "gray")))))
