@@ -39,7 +39,9 @@
    flatland-theme
    flylisp
    git
+   git-blame
    git-commit-mode
+   github-clone
    git-rebase-mode
    hlinum
    ido-ubiquitous

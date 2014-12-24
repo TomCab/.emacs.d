@@ -20,7 +20,7 @@
   (scroll-bar-mode -1))
 
 ;; increase font size for better readability
-(set-face-attribute 'default nil :height 130)
+(set-face-attribute 'default nil :height 110)
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
@@ -61,3 +61,11 @@
 
 ;; Highlight current line number
 (load "hlinum.el")
+
+;; Activate auto-complete on Emacs launch
+(require 'auto-complete)
+(global-auto-complete-mode t)
+
+;; Package auto-complete should use pos-tip to render help pop-ups
+(require 'pos-tip)
+(setq ac-quick-help-prefer-pos-tip t)
