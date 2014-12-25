@@ -93,6 +93,9 @@
 ;; For editing lisps
 (load "elisp-editing.el")
 
+;; For editing R
+(load "R-editing.el")
+
 ;; These customizations change color themes and character size for better
 ;; readability
 (load "themes.el")

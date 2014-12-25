@@ -13,10 +13,15 @@
         try-complete-lisp-symbol))
 
 ;; Highlights matching parenthesis
-(show-paren-mode 1)
+(show-paren-mode t)
 
 ;; Highlight current line
-(global-hl-line-mode 1)
+(global-hl-line-mode t)
+
+;; Enable paredit in all programming modes -parenthesis balancing and
+;; indentation when working with S expressions
+(require 'paredit)
+(paredit-mode t)
 
 ;; Interactive search key bindings. By default, C-s runs
 ;; isearch-forward, so this swaps the bindings.
