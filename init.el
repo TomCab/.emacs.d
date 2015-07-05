@@ -38,14 +38,8 @@
    f
    flatland-theme
    flylisp
-   git
-   git-blame
-   git-commit-mode
-   github-clone
-   git-rebase-mode
    hlinum
    ido-ubiquitous
-   magit
    markdown-mode
    naquadah-theme
    paredit
@@ -53,7 +47,6 @@
    popup
    pos-tip
    projectile
-   racket-mode
    rainbow-delimiters
    s
    smex
